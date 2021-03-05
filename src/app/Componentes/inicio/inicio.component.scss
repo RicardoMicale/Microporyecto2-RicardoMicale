@@ -10,10 +10,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: $texto;
+  height: 12vh;
+  width: 100vw;
 
   img {
     width: auto;
     height: 10vh;
-    border: solid .5em $texto;
+    border: solid .5em $acento;
   }
 }

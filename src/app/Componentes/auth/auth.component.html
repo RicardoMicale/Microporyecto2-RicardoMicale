@@ -1,20 +1,6 @@
 <div class="auth-form">
   <div class="wrapper">
-    <form [formGroup]="authForm" class="form-container" (ngSubmit)="onSubmit()">
-      <div class="=input-container" *ngIf="isRegister">
-        <label for="displayName">Ingrese su nombre:</label>
-        <input type="text" id="displayName" placeholder="John Doe" formControlName="displayName">
-      </div>
-      <div class="input-container">
-        <label for="email">Ingrese su email:</label>
-        <input type="email" id="email" placeholder="example@email.com" formControlName="email">
-      </div>
-      <div class="input-container">
-        <label for="password">Ingrese su clave:</label>
-        <input type="password" id="password" placeholder="***********" formControlName="password">
-      </div>
-      <button type="submit" class="btn-create">Ingresar</button>
-    </form>
+    <img src="assets/imagenes/google logo.png" alt="google-logo">
     <div class="form-container buttons">
       <button type="button" (click)="googleLogin()">Google</button>
     </div>

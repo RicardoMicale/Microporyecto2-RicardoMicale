@@ -20,10 +20,14 @@ import {Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './Componentes/profile/profile.component';
 import { NavbarComponent } from './Componentes/navbar/navbar.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
+import { ListaComponent } from './Componentes/lista/lista.component';
+import { DetallesComponent } from './Componentes/detalles/detalles.component';
+import { CrearReservaComponent } from './Componentes/crear-reserva/crear-reserva.component';
+import { FavoritosComponent } from './Componentes/favoritos/favoritos.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
-
+  {path: 'lista', component: ListaComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'profile', component: ProfileComponent},
 ]
@@ -34,7 +38,11 @@ const routes: Routes = [
     LoginComponent,
     ProfileComponent,
     NavbarComponent,
-    InicioComponent
+    InicioComponent,
+    ListaComponent,
+    DetallesComponent,
+    CrearReservaComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,

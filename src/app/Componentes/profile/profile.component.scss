@@ -1,0 +1,56 @@
+@import 'src/styles.scss';
+
+* {
+  overflow-x: hidden;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh
+}
+
+.lupa {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 3vw;
+}
+
+.buscar-peli {
+  width: 30vw;
+  height: 5vh;
+  margin-right: 3vw;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  top: -10vh;
+
+  .movie-container {
+    background-color: $texto;
+    height: 50vh;
+    width: 100vw;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+      width: 10vw;
+      height: 50vh;
+      color: $fondo;
+
+      ::hover {
+        border: solid 1em $acento;
+      }
+    }
+  }
+
+  .divider {
+    width: 100vw;
+    height: 2rem;
+    background-color: $detalles;
+    margin-bottom: 0;
+  }
+}

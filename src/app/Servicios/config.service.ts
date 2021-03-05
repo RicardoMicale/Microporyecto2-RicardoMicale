@@ -10,4 +10,8 @@ import { catchError, retry } from 'rxjs/operators';
 export class ConfigService {
 
   constructor(private http: HttpClient) { }
+
+  getImage(): Observable<File> {
+    return null;
+  }
 }

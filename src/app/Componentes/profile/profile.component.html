@@ -1,2 +1,16 @@
-<!-- <h1>Hola {{ authService.userData[0].displayName }}</h1> -->
-<a href="#" *ngIf="authService.isAuthenticated" (click)="authService.logout($event)">Sign Out</a>
+<!-- Lista de peliculas -->
+
+<div>
+  <img src="assets/imagenes/lupa.svg" alt="buscar" class="lupa">
+  <input type="text" placeholder="Buscar pelicula" class="buscar-peli">
+</div>
+<div class="showcase">
+  <div class="divider"></div>
+  <div class="movie-container">
+      <a routerLink=""><img src="" alt="pelicula"></a>
+      <a routerLink=""><img src="" alt="pelicula"></a>
+      <a routerLink=""><img src="" alt="pelicula"></a>
+      <a routerLink=""><img src="" alt="pelicula"></a>
+      <a routerLink=""><img src="" alt="pelicula"></a>
+  </div>
+</div>

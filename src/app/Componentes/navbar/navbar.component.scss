@@ -2,19 +2,31 @@
 
 .nav {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   background-color: $titulos;
   padding: 2vh 0;
   color: $texto;
 
+
+
   h1 {
-    margin-left: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: $large;
+    margin-left: 2em;
+
+    img {
+      margin-right: 1em;
+      width: 40px;
+      height: 40px;
+    }
   }
 
   ul {
     display: flex;
+    justify-content: space-around;
     align-items: center;
 
     li {
@@ -33,7 +45,7 @@
         align-items: center;
         background-color: $texto;
         height: 7vh;
-        width: 7vw;
+        width: 8vw;
         border-radius: .2em;
 
         a {
