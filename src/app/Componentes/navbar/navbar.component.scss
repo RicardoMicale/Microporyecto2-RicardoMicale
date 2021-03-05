@@ -1,0 +1,55 @@
+@import 'src/styles.scss';
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $titulos;
+  padding: 2vh 0;
+  color: $texto;
+
+  h1 {
+    margin-left: 3vw;
+    font-size: $large;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      list-style: none;
+      margin: 0 3vw;
+      font-size: $medium;
+
+      a {
+        text-decoration: none;
+        color: $texto;
+      }
+
+      &.login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $texto;
+        height: 7vh;
+        width: 7vw;
+        border-radius: .2em;
+
+        a {
+          color: $acento;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav ul li {
+    display: none;
+  }
+
+  .nav ul .login {
+    visibility: hidden;
+  }
+}

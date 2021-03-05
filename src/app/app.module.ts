@@ -17,10 +17,14 @@ import { LoginComponent } from './Componentes/login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './Componentes/profile/profile.component';
+import { NavbarComponent } from './Componentes/navbar/navbar.component';
+import { InicioComponent } from './Componentes/inicio/inicio.component';
 
 const routes: Routes = [
-  {path: '', component: AuthComponent},
+  {path: '', component: InicioComponent},
+
+  {path: 'auth', component: AuthComponent},
   {path: 'profile', component: ProfileComponent},
 ]
 @NgModule({
@@ -28,7 +32,9 @@ const routes: Routes = [
     AppComponent,
     AuthComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavbarComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

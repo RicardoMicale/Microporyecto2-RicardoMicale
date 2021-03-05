@@ -12,5 +12,16 @@ $fuentes: 'Red Hat Display', sans-serif, Helvetica, Arial;
 
 // Tamaños de letra
 $small: 1em;
-$medium: 2em;
-$large: 4em;
+$medium: 1.5em;
+$large: 2em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fuentes;
+}
+
+body {
+  background-color: $fondo;
+}

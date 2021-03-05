@@ -1,0 +1,19 @@
+@import 'src/styles.scss';
+
+.titulo {
+  color: $texto;
+  margin-top: 13vh;
+  margin-left: 20vw;
+}
+
+.preview-peliculas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  img {
+    width: auto;
+    height: 10vh;
+    border: solid .5em $texto;
+  }
+}
