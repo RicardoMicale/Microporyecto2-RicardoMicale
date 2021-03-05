@@ -1,0 +1,2 @@
+<!-- <h1>Hola {{ authService.userData[0].displayName }}</h1> -->
+<a href="#" *ngIf="authService.isAuthenticated" (click)="authService.logout($event)">Sign Out</a>
