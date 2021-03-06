@@ -3,7 +3,7 @@
   <nav>
     <ul>
       <li><a routerLink="">Inicio</a></li>
-      <li><a routerLink="profile">Peliculas</a></li>
+      <li class="lista"><a routerLink="profile">Peliculas</a></li>
       <li *ngIf="user"><a routerLink="lista">Reservas</a></li>
       <li class="login" *ngIf="!user"><a routerLink="/auth">Log In</a></li>
       <li class="login" *ngIf="user" (click)="authService.logout()"><a routerLink="">Log Out</a></li>

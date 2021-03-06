@@ -4,20 +4,29 @@
     <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="poster">
   </div>
   <div class="informacion">
-    <span>Generos:</span>
-    <span>Lenguaje Original: {{ movie.original_language }}</span>
-    <span>Presupuesto:</span>
-    <span>Descripcion:</span>
-    <span>Rating:</span>
-    <span>Productoras:</span>
-    <ul class="productoras">
-      <li>1</li>
+    <span>{{ movie.overview }}</span>
+    <span class="info">Rating: </span>
+    <span>{{ movie.vote_average }}</span>
+    <span class="info">Fecha de lanzamiento: </span>
+    <span>{{ movie.release_date }}</span>
+    <span class="info">Generos:</span>
+    <ul class="genero">
+      <li *ngFor="let genre of movie.genres">{{ genre.name }}</li>
     </ul>
-    <span>Fecha de lanzamiento: </span>
-    <span>Estado: </span>
+    <span class="info">Lenguaje Original: </span>
+    <span>{{ movie.original_language }}</span>
+    <span class="info">Estado: </span>
+    <span>{{ movie.status }}</span>
+    <span class="info">Presupuesto: </span>
+    <span>{{ movie.budget | currency }}</span>
+    <span class="info">Productoras:</span>
+    <ul class="productoras">
+      <li *ngFor="let productora of movie.production_companies">{{ productora.name }}</li>
+    </ul>
+
   </div>
 </div>
 <div class="botones">
-  <button>Favoritos</button>
-  <button routerLink="crear-reserva">Resevar</button>
+  <button (click)="goToFav()"><a routerLink="/favoritos">Favoritos</a></button>
+  <button><a routerLink="/reserva">Reserva</a></button>
 </div>

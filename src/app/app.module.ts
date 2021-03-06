@@ -36,6 +36,7 @@ const routes: Routes = [
     {path: 'detallesChild/:id', component: DetallesChildComponent}
   ]},
   {path: 'reserva', component: CrearReservaComponent},
+  {path: 'lista', component: ListaComponent},
   {path: 'favoritos', component: FavoritosComponent}
 ]
 @NgModule({

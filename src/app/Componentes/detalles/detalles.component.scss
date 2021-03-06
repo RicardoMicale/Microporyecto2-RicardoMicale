@@ -5,24 +5,55 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 10vh;
+  background-color: $texto;
+  padding: 2em 1em;
+
+  .titulo {
+    color: $acento;
+    margin-left: 3em;
+
+    h2 {
+      margin-left: 2em;
+      margin-bottom: .5em;
+    }
+
+    img {
+      width: 20em;
+      height: 30em;
+      margin-right: 4em;
+      border: solid 0.2em $detalles;
+    }
+  }
 
   .informacion {
     display: flex;
     flex-direction: column;
+    margin-right: 10em;
+    margin-top: 0;
 
     ul {
-      margin-left: 2em;
+      margin-left: .5em;
       list-style: none;
+
+      li {
+        color: $detalles;
+        line-height: 1.5rem;
+      }
     }
   }
 
   span {
-    font-size: $medium;
-    color: $texto;
-    margin-top: 1rem;
+    font-size: $small;
+    color: $detalles;
+    margin-top: .3rem;
   }
 
 
+}
+
+.info {
+  font-weight: bold;
+  color: $titulos !important;
 }
 
 .botones {
@@ -40,6 +71,11 @@
     margin: 5rem 3rem;
     cursor: pointer;
     border-radius: .5rem;
+
+    a {
+      text-decoration: none;
+      color: $acento;
+    }
   }
 }
 
@@ -48,8 +84,15 @@
     flex-direction: column;
     justify-content: space-around;
 
+    .informacion {
+      margin-left: 5em;
+      margin-top: 3em;
+    }
+
     .botones {
       margin-bottom: 10vh;
     }
   }
+
+
 }

@@ -61,11 +61,37 @@
 }
 
 @media screen and (max-width: 1024px) {
+
+
+  .nav {
+    overflow-x: hidden;
+
+    margin: 0;
+
+    ul {
+      margin: 0;
+    }
+
+    h1 img {
+      display: none;
+    }
+
+    h1 {
+      font-size: $small;
+    }
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+
+
   .nav ul li {
     display: none;
   }
 
-  .nav ul .login {
-    visibility: hidden;
+  .nav ul .lista, .nav ul .login {
+    display: flex;
   }
 }

@@ -11,7 +11,9 @@ import { ConfigService } from 'src/app/Servicios/config.service';
 export class DetallesComponent implements OnInit {
 
   id: number = 0;
+  movies: any;
   movie: any;
+  movieCount: number;
 
   constructor(
     private router: Router,
@@ -23,9 +25,18 @@ export class DetallesComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.id = +params.get('id');
     })
+    this.details();
+  }
+
+  details() {
     this.moviesService.getDetails(this.id).subscribe(datos => {
+      console.log(datos);
       this.movie = datos;
-      console.log(this.movie);
+
     });
+  }
+
+  goToFav() {
+    this.router.navigate['favoritos']
   }
 }

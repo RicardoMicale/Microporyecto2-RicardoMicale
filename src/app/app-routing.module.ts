@@ -14,6 +14,9 @@ import { FavoritosComponent } from './Componentes/favoritos/favoritos.component'
 import { TarjetaComponent } from './Componentes/tarjeta/tarjeta.component';
 import { DetallesChildComponent } from './Componentes/detalles-child/detalles-child.component';
 
+import { GuardGuard } from './Guard/guard.guard';
+
+
 const routes: Routes = [
   {path: '', component: InicioComponent},
   {path: 'lista', component: ListaComponent},
@@ -22,8 +25,9 @@ const routes: Routes = [
   {path: 'detalles/:id', component: DetallesComponent, children: [
     {path: 'detallesChild/:id', component: DetallesChildComponent}
   ]},
-  {path: 'reserva', component: CrearReservaComponent},
-  {path: 'favoritos', component: FavoritosComponent}
+  {path: 'reserva', pathMatch: 'full', component: CrearReservaComponent, canActivate: [GuardGuard]},
+  {path: 'favoritos',pathMatch: 'full', component: FavoritosComponent, canActivate: [GuardGuard]},
+  {path: 'lista',pathMatch:'full', component: ListaComponent, canActivate: [GuardGuard]}
 ]
 
 @NgModule({

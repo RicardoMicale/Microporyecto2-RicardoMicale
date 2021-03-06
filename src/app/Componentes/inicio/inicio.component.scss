@@ -78,8 +78,10 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+
   ul {
     flex-direction: column;
+    width: 100vw;
 
     li {
       display: flex;
@@ -97,10 +99,6 @@ button {
 
   .poster {
     float: center;
-    margin: 0;
-  }
-
-  .flechas {
     margin: 0;
   }
 }

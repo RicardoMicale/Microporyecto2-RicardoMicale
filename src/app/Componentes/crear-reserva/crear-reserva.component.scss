@@ -1,1 +1,41 @@
 @import 'src/styles.scss';
+
+form {
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+
+    input {
+      width: 10em;
+      height: 2em;
+      float: right;
+    }
+
+    h2 {
+      color: $texto;
+      float: left;
+    }
+  }
+
+  .submit {
+    margin-top: 3em;
+    margin-left: 45vw;
+    border: none;
+    border-radius: .2em;
+    background-color: $texto;
+    color: $acento;
+    width: 7em;
+    height: 2em;
+    font-size: $medium;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  form {
+    div {
+      flex-direction: column;
+    }
+  }
+}
