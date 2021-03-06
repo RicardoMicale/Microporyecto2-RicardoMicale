@@ -24,6 +24,7 @@ ul {
   width: 100vw;
 
   li {
+    position:relative;
     flex-grow: 1;
     height: 20em;
     width: 20%;
@@ -57,4 +58,49 @@ h4 {
 
 h5 {
   font-size: $small;
+}
+
+button {
+  position: absolute;
+  top: 1em;
+  left: 3em;
+  border: none;
+  background-color: $texto;
+  padding: .2rem .5rem;
+  cursor: pointer;
+  border-radius: .25em;
+  border: solid .2em $acento;
+
+  a {
+    text-decoration: none;
+    color: $acento;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ul {
+    flex-direction: column;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 2em 0;
+      width: 95vw;
+    }
+  }
+
+  h4, h5 {
+    overflow-y: hidden;
+  }
+
+  .poster {
+    float: center;
+    margin: 0;
+  }
+
+  .flechas {
+    margin: 0;
+  }
 }

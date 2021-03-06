@@ -2,10 +2,13 @@
 
 <div>
   <img src="assets/imagenes/lupa.svg" alt="buscar" class="lupa">
-  <input type="text" placeholder="Buscar pelicula" class="buscar-peli">
+  <input type="text" placeholder="Buscar pelicula" class="buscar-peli" [(ngModel)]="searchword" (keyup.enter)="update()">
+</div>
+<div class="flechas">
+  <img src="assets/imagenes/arrow-left.svg" alt="arrow" (click)="prevPage()" (click)="cambiarPag()">
+  <img src="assets/imagenes/right-arrow.svg" alt="arrow" (click)="nextPage()" (click)="cambiarPag()">
 </div>
 <div class="showcase">
-  <div class="divider"></div>
   <div class="movie-container">
     <ul>
       <li *ngFor="let movie of movies">
@@ -13,6 +16,7 @@
         <h4 class="nombre"> {{ movie.title }} </h4>
         <h5 class="lenguajes"> {{ movie.original_language }} </h5>
         <h5 class="lenguajes"> {{ movie.vote_average }} </h5>
+        <button><a routerLink="">Fav</a></button>
       </li>
     </ul>
   </div>

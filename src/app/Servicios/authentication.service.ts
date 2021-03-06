@@ -28,38 +28,38 @@ export class AuthenticationService {
     }
   }
 
-  // async loginEmail(email: string, password: string): Promise<firebase.User> {
-  //   try {
-  //     const res = await this.afAuth.signInWithEmailAndPassword(email, password);
-  //     const { user } = res;
-  //     localStorage.setItem('user', user.uid);
-  //     return user;
-  //   } catch(err) {
-  //     console.log(err);
-  //     localStorage.removeItem('user');
-  //     return null;
-  //   }
-  // }
+  async loginEmail(email: string, password: string): Promise<firebase.User> {
+    try {
+      const res = await this.afAuth.signInWithEmailAndPassword(email, password);
+      const { user } = res;
+      localStorage.setItem('user', user.uid);
+      return user;
+    } catch(err) {
+      console.log(err);
+      localStorage.removeItem('user');
+      return null;
+    }
+  }
 
-  // async signUpEmail(
-  //   displayName: string,
-  //   email: string,
-  //   password:string
-  // ): Promise<firebase.User> {
-  //   try{
-  //     const res = await this.afAuth.createUserWithEmailAndPassword(email, password);
-  //     const { user } = res;
-  //     localStorage.setItem('user', user.uid);
-  //     user.updateProfile({
-  //       displayName,
-  //       photoURL: ''
-  //     })
-  //   } catch(err) {
-  //     console.log(err);
-  //     localStorage.removeItem('user');
-  //     return null;
-  //   }
-  // }
+  async signUpEmail(
+    displayName: string,
+    email: string,
+    password:string
+  ): Promise<firebase.User> {
+    try{
+      const res = await this.afAuth.createUserWithEmailAndPassword(email, password);
+      const { user } = res;
+      localStorage.setItem('user', user.uid);
+      user.updateProfile({
+        displayName,
+        photoURL: ''
+      })
+    } catch(err) {
+      console.log(err);
+      localStorage.removeItem('user');
+      return null;
+    }
+  }
 
   getCurrentUser(): Observable<firebase.User>{
     return this.afAuth.user;

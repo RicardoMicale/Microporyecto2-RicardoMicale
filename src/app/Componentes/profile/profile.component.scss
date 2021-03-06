@@ -24,13 +24,6 @@ div {
   margin-right: 3vw;
 }
 
-.divider {
-  position: absolute;
-  background-color: $detalles;
-  height: 2em;
-  width: 100vw;
-}
-
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -76,4 +69,62 @@ h4 {
 
 h5 {
   font-size: $small;
+}
+
+button {
+  position: absolute;
+  top: 1em;
+  left: 3em;
+  border: none;
+  background-color: $texto;
+  padding: .2rem .5rem;
+  cursor: pointer;
+  border-radius: .25em;
+  border: solid .2em $acento;
+
+  a {
+    text-decoration: none;
+    color: $acento;
+  }
+}
+
+.flechas {
+  img {
+    width: 2em;
+    height: 2em;
+    margin: 0 10em;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ul {
+    flex-direction: column;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 2em 0;
+      width: 95vw;
+    }
+  }
+
+  h4, h5 {
+    overflow-y: hidden;
+  }
+
+  .poster {
+    float: center;
+    margin: 0;
+  }
+
+  .flechas {
+    margin: 0;
+  }
+
+  button {
+    left: 1.5em;
+  }
 }

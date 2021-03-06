@@ -13,11 +13,18 @@ export class ConfigService {
   apiKey: string = 'b52712245cbce606c4f237cbfa3a5342';
 
   URL = `https://api.themoviedb.org/3/discover/movie?api_key=${this.apiKey}`;
-  SEARCH = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=1&include_adult=false`
 
   constructor(private http: HttpClient) { }
 
   getAllMovies(): Observable<any> {
     return this.http.get(this.URL);
+  }
+
+  getNewPage(pageNum: number): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&page=${pageNum}&include_adult=false`);
+  }
+
+  search(busqueda: string): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${busqueda}&page=1&include_adult=false`);
   }
 }

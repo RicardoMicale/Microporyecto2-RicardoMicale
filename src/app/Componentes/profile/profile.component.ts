@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { AuthenticationService } from 'src/app/Servicios/Authentication.service';
 import { ConfigService } from 'src/app/Servicios/config.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-profile',
@@ -12,10 +14,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(public authService: AuthenticationService, private movieService: ConfigService) { }
+  constructor(
+    public authService: AuthenticationService,
+    private movieService: ConfigService,
+    private http: HttpClient
+    ) { }
 
   user: any;
-  movies: any;
+  movies: Observable<any>;
+  apiKey = this.movieService.apiKey;
+  URL: string;
+  searchword: string = '';
+  pageNum = 1;
 
   ngOnInit(): void {
     this.user = this.authService.currentUserId;
@@ -25,7 +35,23 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  cambiarPag() {
+    this.movieService.getNewPage(this.pageNum).subscribe(datos => {
+      this.movies = datos.results;
+    })
+  }
 
+  update() {
+    this.movieService.search(this.searchword).subscribe(datos => {
+      this.movies = datos.results;
+    });
+  }
 
+  nextPage() {
+    this.pageNum++;
+  }
 
+  prevPage() {
+    this.pageNum--;
+  }
 }
