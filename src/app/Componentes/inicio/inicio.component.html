@@ -1,13 +1,13 @@
 <div class="titulo">
   <h3>Lista de peliculas</h3>
 </div>
-<div clas="preview-peliculas" >
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
-  <img src="" alt="pelicula">
+<div clas="preview-peliculas">
+  <ul *ngIf="movies">
+    <li *ngFor="let movie of movies | slice:0:8">
+      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt={{movie.original_title}} class="poster">
+      <h4 class="nombre"> {{ movie.title }} </h4>
+      <h5 class="lenguajes"> {{ movie.original_language }} </h5>
+      <h5 class="lenguajes"> {{ movie.vote_average }} </h5>
+    </li>
+  </ul>
 </div>

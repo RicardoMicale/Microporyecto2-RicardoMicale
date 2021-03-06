@@ -1,0 +1,54 @@
+@import 'src/styles.scss';
+
+.detalles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10vh;
+
+  .informacion {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      margin-left: 2em;
+      list-style: none;
+    }
+  }
+
+  span {
+    font-size: $medium;
+    color: $texto;
+    margin-top: 1rem;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+      font-size: $medium;
+      color: $acento;
+      background-color: $texto;
+      border: none;
+      width: 10rem;
+      height: 3rem;
+      margin-top: 5rem;
+      cursor: pointer;
+      border-radius: .5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .detalles {
+    flex-direction: column;
+    justify-content: center;
+
+    .botones {
+      margin-bottom: 10vh;
+    }
+  }
+}

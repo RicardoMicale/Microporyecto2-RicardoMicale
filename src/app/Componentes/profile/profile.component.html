@@ -7,10 +7,13 @@
 <div class="showcase">
   <div class="divider"></div>
   <div class="movie-container">
-      <a routerLink=""><img src="" alt="pelicula"></a>
-      <a routerLink=""><img src="" alt="pelicula"></a>
-      <a routerLink=""><img src="" alt="pelicula"></a>
-      <a routerLink=""><img src="" alt="pelicula"></a>
-      <a routerLink=""><img src="" alt="pelicula"></a>
+    <ul>
+      <li *ngFor="let movie of movies">
+        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt={{movie.title}} class="poster">
+        <h4 class="nombre"> {{ movie.title }} </h4>
+        <h5 class="lenguajes"> {{ movie.original_language }} </h5>
+        <h5 class="lenguajes"> {{ movie.vote_average }} </h5>
+      </li>
+    </ul>
   </div>
 </div>

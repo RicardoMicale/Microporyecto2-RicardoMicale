@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/Servicios/config.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-inicio',
@@ -7,15 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  apiKey: string = 'b52712245cbce606c4f237cbfa3a5342';
+  URL = `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=1`;
 
-  images = [];
+  constructor(private movieService: ConfigService) { }
 
-  loadImages(): void {
-
-  }
+  movies: any;
 
   ngOnInit(): void {
+    this.movieService.getAllMovies().subscribe(datos => { //Carga todas las peliculas
+      this.movies = datos.results;
+      console.log(this.movies)
+    });
   }
 
 }

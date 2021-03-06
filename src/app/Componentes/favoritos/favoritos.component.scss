@@ -1,0 +1,27 @@
+@import 'src/styles.scss';
+
+.lista-favoritos {
+  overflow-x: hidden;
+
+  h1 {
+    margin-top: 3.5em;
+    margin-left: 3em;
+    color: $texto;
+    font-size: $large;
+    margin-bottom: 2em;
+  }
+
+  .contenedor-imagenes {
+    background-color: $texto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 10vw;
+      height: 20vh;
+    }
+  }
+}

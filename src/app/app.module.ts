@@ -16,7 +16,7 @@ import { AuthComponent } from './Componentes/auth/auth.component';
 import { LoginComponent } from './Componentes/login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './Componentes/profile/profile.component';
 import { NavbarComponent } from './Componentes/navbar/navbar.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
@@ -24,12 +24,16 @@ import { ListaComponent } from './Componentes/lista/lista.component';
 import { DetallesComponent } from './Componentes/detalles/detalles.component';
 import { CrearReservaComponent } from './Componentes/crear-reserva/crear-reserva.component';
 import { FavoritosComponent } from './Componentes/favoritos/favoritos.component';
+import { TarjetaComponent } from './Componentes/tarjeta/tarjeta.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
   {path: 'lista', component: ListaComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'profile', component: ProfileComponent},
+  {path: 'detalles', component: DetallesComponent},
+  {path: 'reserva', component: CrearReservaComponent},
+  {path: 'favoritos', component: FavoritosComponent}
 ]
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ const routes: Routes = [
     ListaComponent,
     DetallesComponent,
     CrearReservaComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,
