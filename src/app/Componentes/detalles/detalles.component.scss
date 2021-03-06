@@ -22,30 +22,31 @@
     margin-top: 1rem;
   }
 
-  .botones {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 
-    button {
-      font-size: $medium;
-      color: $acento;
-      background-color: $texto;
-      border: none;
-      width: 10rem;
-      height: 3rem;
-      margin-top: 5rem;
-      cursor: pointer;
-      border-radius: .5rem;
-    }
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    font-size: $medium;
+    color: $acento;
+    background-color: $texto;
+    border: none;
+    width: 10rem;
+    height: 3rem;
+    margin: 5rem 3rem;
+    cursor: pointer;
+    border-radius: .5rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .detalles {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 
     .botones {
       margin-bottom: 10vh;

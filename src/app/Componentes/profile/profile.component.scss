@@ -12,6 +12,14 @@ div {
   margin-top: 10vh
 }
 
+.showcase {
+  margin: 0;
+
+  .movie-container {
+    margin: 2em 0;
+  }
+}
+
 .lupa {
   height: 2rem;
   width: 2rem;
@@ -43,6 +51,11 @@ ul {
     margin: 2em 3em 6em 0;
     overflow-x: visible !important;
   }
+}
+
+.detalles {
+  width: 15em;
+  height: 20em;
 }
 
 .poster {
@@ -89,6 +102,8 @@ button {
 }
 
 .flechas {
+  margin-top: 2em;
+
   img {
     width: 2em;
     height: 2em;
@@ -121,7 +136,7 @@ button {
   }
 
   .flechas {
-    margin: 0;
+    margin: 2em 0;
   }
 
   button {

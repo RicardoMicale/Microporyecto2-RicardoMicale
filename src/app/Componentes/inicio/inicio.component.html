@@ -4,7 +4,7 @@
 <div clas="preview-peliculas">
   <ul *ngIf="movies">
     <li *ngFor="let movie of movies | slice:0:8">
-      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt={{movie.original_title}} class="poster">
+      <a href="detalles/{{ movie.id }}"><img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt={{movie.original_title}} class="poster"></a>>
       <h4 class="nombre"> {{ movie.title }} </h4>
       <h5 class="lenguajes"> {{ movie.original_language }} </h5>
       <h5 class="lenguajes"> {{ movie.vote_average }} </h5>

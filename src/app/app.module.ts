@@ -25,13 +25,16 @@ import { DetallesComponent } from './Componentes/detalles/detalles.component';
 import { CrearReservaComponent } from './Componentes/crear-reserva/crear-reserva.component';
 import { FavoritosComponent } from './Componentes/favoritos/favoritos.component';
 import { TarjetaComponent } from './Componentes/tarjeta/tarjeta.component';
+import { DetallesChildComponent } from './Componentes/detalles-child/detalles-child.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
   {path: 'lista', component: ListaComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'detalles', component: DetallesComponent},
+  {path: 'detalles', component: DetallesComponent, children: [
+    {path: 'detallesChild/:id', component: DetallesChildComponent}
+  ]},
   {path: 'reserva', component: CrearReservaComponent},
   {path: 'favoritos', component: FavoritosComponent}
 ]
@@ -47,7 +50,8 @@ const routes: Routes = [
     DetallesComponent,
     CrearReservaComponent,
     FavoritosComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    DetallesChildComponent
   ],
   imports: [
     BrowserModule,
@@ -67,3 +71,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppModule { }
+export { routes }

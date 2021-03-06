@@ -27,4 +27,8 @@ export class ConfigService {
   search(busqueda: string): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=en-US&query=${busqueda}&page=1&include_adult=false`);
   }
+
+  getDetails(id: number): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}>&language=en-US`);
+  }
 }

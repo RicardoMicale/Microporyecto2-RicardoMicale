@@ -5,14 +5,14 @@
   <input type="text" placeholder="Buscar pelicula" class="buscar-peli" [(ngModel)]="searchword" (keyup.enter)="update()">
 </div>
 <div class="flechas">
-  <img src="assets/imagenes/arrow-left.svg" alt="arrow" (click)="prevPage()" (click)="cambiarPag()">
+  <img src="assets/imagenes/arrow-left.svg" alt="arrow"  (click)="prevPage()" (click)="cambiarPag()">
   <img src="assets/imagenes/right-arrow.svg" alt="arrow" (click)="nextPage()" (click)="cambiarPag()">
 </div>
 <div class="showcase">
   <div class="movie-container">
     <ul>
       <li *ngFor="let movie of movies">
-        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt={{movie.title}} class="poster">
+        <a href="detalles/{{ movie.id }}" class="detalles"><img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt={{movie.title}} class="poster"></a>
         <h4 class="nombre"> {{ movie.title }} </h4>
         <h5 class="lenguajes"> {{ movie.original_language }} </h5>
         <h5 class="lenguajes"> {{ movie.vote_average }} </h5>

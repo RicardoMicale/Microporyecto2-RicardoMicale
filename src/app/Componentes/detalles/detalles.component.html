@@ -1,11 +1,11 @@
 <div class="detalles">
   <div class="titulo">
-    <h2>Titulo</h2>
-    <img src="" alt="poster">
+    <h2> {{ movie.title }} </h2>
+    <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="poster">
   </div>
   <div class="informacion">
     <span>Generos:</span>
-    <span>Lenguaje Original:</span>
+    <span>Lenguaje Original: {{ movie.original_language }}</span>
     <span>Presupuesto:</span>
     <span>Descripcion:</span>
     <span>Rating:</span>
@@ -16,8 +16,8 @@
     <span>Fecha de lanzamiento: </span>
     <span>Estado: </span>
   </div>
-  <div class="botones">
-    <button>Favoritos</button>
-    <button routerLink="crear-reserva">Resevar</button>
-  </div>
+</div>
+<div class="botones">
+  <button>Favoritos</button>
+  <button routerLink="crear-reserva">Resevar</button>
 </div>
